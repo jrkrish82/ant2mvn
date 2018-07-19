@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <taskdef classname="org.apache.ivy.ant.IvyResolve" name="ivy-resolve"/>
+  <taskdef classname="org.apache.ivy.ant.IvyPublish" name="ivy-publish"/>
+  <property name="ivy.local.default.root" value="/Users/maclab/bootlab/app-replatform/mavenization/apps-platform-acceleration-ant-code/projects/list/../../repository/local"/>
+  <ivy-resolve file="ivy.xml"/>
+  <ivy-publish resolver="local" forcedeliver="true" overwrite="true" pubrevision="1.0" artifactspattern="/Users/maclab/bootlab/app-replatform/mavenization/apps-platform-acceleration-ant-code/projects/list/target/[module]-[revision].[ext]" status="integration" pubdate="now"/>
+  <echo message="project list released with version 1.0"/>
+</target>
+</project>
